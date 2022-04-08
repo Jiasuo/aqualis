@@ -3,16 +3,19 @@
     <div class="topBg"></div>
     <Top />
   <router-view></router-view>
+    <Footer/>
 </template>
 
 <script>
 // Components
 import Top from "./components/Top.vue"
+import Footer from "./components/Footer.vue"
 
 export default {
   name: 'App',
   components: {
-    Top
+    Top,
+    Footer,
   }
 }
 </script>

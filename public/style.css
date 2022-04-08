@@ -48,6 +48,12 @@ h2{
       letter-spacing: 0.275em;
       color: white;
   }
+  h5{
+    text-align: center;
+    font-family: var(--title);
+    font-size: clamp(16px, 1.25vw, 24px);
+    color: white;
+  }
 
   p{
     font-size: clamp(12px, 1.25vw, 24px);
@@ -69,4 +75,9 @@ h2{
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 100%);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
+  }
+
+  ::selection{
+    color: white;
+    background-color: var(--orange);
   }

@@ -3,7 +3,7 @@
   <header>
     <h1>Aqualis</h1>
     <div class="card">
-      <h2>Le plein de fraîcheur !</h2>
+      <h2>Fais le plein de fraîcheur !</h2>
       <p>
         Viens découvrir le meilleur parc aquatique de France. Un grand nombre
         d’attractions promet du fun aquatique pour toute la famille!
@@ -98,13 +98,13 @@
   <section class="activitiesContainer">
     <h2>Attractions</h2>
     <div class="attractionList">
-      <div class="attraction">
+      <div class="attraction children">
         <div class="button">Enfants</div>
       </div>
-      <div class="attraction">
+      <div class="attraction sensations">
         <div class="button">Sensations</div>
       </div>
-      <div class="attraction">
+      <div class="attraction chill">
         <div class="button">Détente</div>
       </div>
     </div>
@@ -113,27 +113,27 @@
   <section class="calendarContainer">
     <h2>Calendrier</h2>
     <div class="calendar">
-      <div class="calendarCard"></div>
+      <div class="calendarCard">
+        <img src="../assets/img/calendar.png" alt="calendrier">
+      </div>
       <ul class="legends">
         <li class="legend">
-          <span class="indocator"></span>Parc ouvert de 10h30 à 17h30<br />Attractions
+          <div class="indicator open"></div>Parc ouvert de 10h30 à 17h30<br />Attractions
           ouvertes de 10h30 à 17h30
         </li>
         <li class="legend">
-          <span class="indocator"></span>Parc ouvert de 10h30 à 17h30<br />Attractions
+          <div class="indicator open2"></div>Parc ouvert de 10h30 à 17h30<br />Attractions
           ouvertes de 10h30 à 17h30
         </li>
         <li class="legend">
-          <span class="indocator"></span>Parc ouvert de 10h30 à 17h30<br />Attractions
+          <div class="indicator open3"></div>Parc ouvert de 10h30 à 17h30<br />Attractions
           ouvertes de 10h30 à 17h30
         </li>
         <li class="legend">
-          <span class="indocator"></span>Parc ouvert de 10h30 à 17h30<br />Attractions
-          ouvertes de 10h30 à 17h30
-        </li>
+          <div class="indicator closed"></div>Parc fermé</li>
       </ul>
     </div>
-    <div class="cta">Billetterie</div>
+    <div class="cta button">Billetterie</div>
   </section>
 </template>
 
@@ -195,19 +195,26 @@ header .card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 10;
 }
 .card h2 {
   font-size: clamp(18px, 1.88vw, 36px);
   font-family: var(--title);
+  letter-spacing: 0.1em;
 }
 .card p {
   margin-top: 1.04vw;
   font-size: clamp(12px, 1.04vw, 20px);
   line-height: clamp(18px, 1.56vw, 30px);
 }
-.card .cta {
+header .card .cta {
   margin-top: 1.5vw;
-  background: linear-gradient(196.64deg, #eb6b20 11.5%, #af5017 89.27%);
+  background-image: linear-gradient(196.64deg, #eb6b20 11.5%, #af5017 89.27%);
+  transition: 0.3s linear;
+}
+header .card .cta:hover {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 100%);
 }
 /* #endregion */
 
@@ -353,6 +360,94 @@ border-radius: clamp(7.5px, 0.78vw, 15px);
   font-family: var(--title);
   font-size: clamp(16px, 1.67vw, 32px);
   letter-spacing: 0.05em;
+}
+/* #endregion */
+
+/* #region ACTIVITIES */
+section.activitiesContainer{
+  padding:16vw 15.63vw 7.81vw 15.63vw;
+  height: 63.38vw;
+  background-image: url("../assets/img/activities_bg.png"), linear-gradient(180deg, #1e57a3 0%, var(--blue) 100%);
+  background-size: contain, contain;
+  background-position: 0 5.21vw, center;
+  background-repeat: no-repeat;
+}
+.attractionList{
+  margin-top: 7.55vw;
+  display: flex;
+  justify-content: space-between;
+}
+.attractionList .attraction{
+  width: 20.21vw;
+  height: 24.51vw;
+  padding: 2.6vw;
+  background-size: cover;
+}
+.attraction.children{
+  background-image: url("../assets/img/children.jpg");
+}
+.attraction.sensations{
+  background-image: url("../assets/img/sensations.jpg");
+}
+.attraction.chill{
+  background-image: url("../assets/img/chill.jpg");
+}
+.attractionList .attraction:hover .button{
+  background-image: linear-gradient(196.64deg, #EB6B20 11.5%, #AF5017 89.27%);
+}
+/* #endregion */
+
+/* #region CALENDAR */
+section.calendarContainer{
+  padding: 7.81vw 15.63vw 6vw 15.63vw;
+  background-image: linear-gradient(180deg, var(--blue) 0%, #1e57a3 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calendar{
+  margin-top: 3.65vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.calendarCard img{
+  width: 38.85vw;
+  height: 29.06vw;
+}
+.calendar .legends{
+  color: var(--white);
+}
+.legends .legend{
+  display: flex;
+  align-items: center;
+}
+.legend:not(:first-child){
+  margin-top: 2.34vw;
+}
+.legend .indicator{
+  margin-right: 1.56vw;
+  width: 2.08vw;
+  height: 2.08vw;
+  border-radius: 50%;
+}
+.indicator.open{
+  background-image: linear-gradient(180deg, rgba(0, 181, 0, 0.7) 0%, rgba(0, 181, 0, 0.2) 100%);
+}
+.indicator.open2{
+  background-image: linear-gradient(180deg, rgba(32, 140, 235, 0.7) 0%, rgba(32, 140, 235, 0.2) 100%);
+}
+.indicator.open3{
+  background-image: linear-gradient(180deg, rgba(235, 107, 32, 0.7) 0%, rgba(235, 107, 32, 0.2) 100%);
+}
+.indicator.closed{
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(196, 196, 196, 0.2) 100%);
+}
+.calendarContainer .cta{
+  margin-top: 5vw;
+  width: clamp(163px, 16.98vw, 326px);
+  background-image: linear-gradient(196.64deg, #EB6B20 11.5%, #AF5017 89.27%);
 }
 /* #endregion */
 </style>

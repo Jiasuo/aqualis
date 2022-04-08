@@ -11,7 +11,7 @@
       <ul class="nav right">
           <li class="navItem"><router-link to="/">Services</router-link></li>
           <li class="navItem"><router-link to="/">Contact</router-link></li>
-          <li class="navItem"><router-link to="/" class="button tickets">Billetterie</router-link></li>
+          <li class="navItem tickets"><router-link to="/" class="button tickets">Billetterie</router-link></li>
       </ul>
   </div>
 </template>
@@ -34,11 +34,11 @@ export default {
   display: grid;
   grid-template-columns: 1fr clamp(45px, 4.69vw, 90px) 1fr;
   gap: clamp(100px, 10.42vw, 200px);
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     90.27deg,
     rgba(255, 255, 255, 0.49) 0%,
     rgba(255, 255, 255, 0.07) 100%
-  );
+  ); */
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   font-family: 'Luckiest Guy', cursive;
@@ -56,7 +56,12 @@ export default {
 a{
     color: white;
     text-decoration: none;
-    font-size: clamp(12px, 1.04vw, 20px);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+}
+
+.navItem:not([class*=tickets]) a:hover{
+    color: var(--orange);
 }
 .nav{
     display: flex;
@@ -67,5 +72,8 @@ a{
     /* width: clamp(90px, 9.38vw, 180px);
     height: clamp(23px, 2.4vw, 46px); */
     background: linear-gradient(196.64deg, #EB6B20 11.5%, #AF5017 89.27%);
+}
+.navItem .tickets:hover {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 100%);
 }
 </style>
