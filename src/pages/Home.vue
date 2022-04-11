@@ -319,7 +319,15 @@ section.activitiesContainer{
   height: 24.51vw;
   padding: 2.6vw;
   background-size: cover;
+  border-radius: 1.15vw;
+  display: flex;
+  flex-direction: column-reverse;
 }
+
+.attractionList .attraction:hover{
+  cursor: pointer;
+}
+
 .attraction.children{
   background-image: url("../assets/img/children.jpg");
 }
