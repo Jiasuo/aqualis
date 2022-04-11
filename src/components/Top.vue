@@ -25,8 +25,8 @@
 import Contact from "./Contact.vue"
 // Dependencies
 import {ref} from "vue"
-const showContact = ref(true); // Dev
-// const showContact = ref(false); // prod
+// const showContact = ref(true); // Dev
+const showContact = ref(false); // prod
 
 </script>
 
