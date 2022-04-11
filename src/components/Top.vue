@@ -16,10 +16,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "Top",
-};
+<script setup>
 </script>
 
 <style scoped>
