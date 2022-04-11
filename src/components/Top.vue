@@ -10,13 +10,24 @@
       </div>
       <ul class="nav right">
           <li class="navItem"><router-link :to="{name: 'About'}" active-class="active">À propos</router-link></li>
-          <li class="navItem"><router-link to="/" active-class="active">Contact</router-link></li>
+          <li class="navItem"><div  @click="showContact=true" class="contactButton">Contact</div></li>
           <li class="navItem tickets"><router-link to="/" class="button tickets">Billetterie</router-link></li>
       </ul>
   </div>
+  <!-- Contact modal -->
+  <teleport to="body">
+      <Contact v-if="showContact" @closeContact="showContact=false" />
+  </teleport>
 </template>
 
 <script setup>
+// Components
+import Contact from "./Contact.vue"
+// Dependencies
+import {ref} from "vue"
+const showContact = ref(true); // Dev
+// const showContact = ref(false); // prod
+
 </script>
 
 <style scoped>
@@ -74,5 +85,13 @@ a{
 }
 .navItem a.active{
     color: var(--orange);
+}
+.contactButton{
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+}
+.contactButton:hover{
+    color: var(--orange)
 }
 </style>
