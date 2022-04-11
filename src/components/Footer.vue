@@ -129,7 +129,7 @@ p.copyright {
   display: flex;
   justify-content: space-between;
   color: white;
-  font-size: clamp(12px, 1.25vw, 24px);
+  font-size: clamp(10px, 0.94vw, 18px);
 }
 .weather .infos > div {
   display: flex;

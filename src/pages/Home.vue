@@ -32,21 +32,9 @@
     </div>
     <!-- Bot -->
     <div class="attractionExemples">
-      <div class="attraction">
-        <div class="attractionDetails">
-          <h3>Naga</h3>
-        </div>
-      </div>
-      <div class="attraction">
-        <div class="attractionDetails">
-          <h3>Naga</h3>
-        </div>
-      </div>
-      <div class="attraction">
-        <div class="attractionDetails">
-          <h3>Naga</h3>
-        </div>
-      </div>
+      <Attraction title="Test" />
+      <Attraction />
+      <Attraction />
     </div>
   </section>
   <!-- TICKETS -->
@@ -138,6 +126,8 @@
 </template>
 
 <script setup>
+// Components
+import Attraction from "../components/Attraction.vue"
 </script>
 
 <style scoped>
@@ -166,11 +156,11 @@ header::before {
 }
 .img_mask {
   width: 100%;
-  height: 16.22vw;
+  height: 16.23vw;
   position: absolute;
-  bottom: -0.25vw;
+  bottom: -0.2vw;
   background-image: url("../assets/img/header_mask.svg");
-  background-size: contain;
+  background-size: cover;
 }
 h1 {
   margin-top: -2.5vw;
@@ -243,57 +233,7 @@ section.detailsContainer {
   display: flex;
   justify-content: space-between;
 }
-.attraction {
-  width: clamp(194px, 20.21vw, 388px);
-  height: clamp(325px, 33.85vw, 650px);
-  background-image: url("../assets/img/attraction.jpg");
-  background-size: cover;
-  border-radius: 1.72vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  overflow: hidden;
-  cursor: pointer;
-}
-.attractionDetails::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: clamp(274.5px, 28.59vw, 549px);
-  top: -0.1vw;
-  left: 0;
-  background-image: url("../assets/img/waveB.svg");
-  background-size: cover;
-  background-position: top;
-  z-index: 1;
-}
-.attractionDetails::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: clamp(278.75px, 29.04vw, 557.5px);
-  background-image: url("../assets/img/waveF.svg");
-  background-size: cover;
-  background-position: top;
-  z-index: 2;
-}
-.attractionDetails {
-  width: 100%;
-  height: clamp(140px, 14.58vw, 280px);
-  position: relative;
-  transition: ease-out 0.5s all;
-}
-.attractionDetails:hover {
-  height: clamp(278.75px, 29.04vw, 557.5px);
-}
-.attractionDetails h3 {
-  margin-top: clamp(90px, 9.38vw, 180px);
-  margin-left: 2.6vw;
-  position: relative;
-  z-index: 3;
-}
+
 /* #endregion */
 
 /* #region TICKETS */
@@ -397,7 +337,7 @@ section.activitiesContainer{
 /* #region CALENDAR */
 section.calendarContainer{
   padding: 7.81vw 15.63vw 6vw 15.63vw;
-  background-image: linear-gradient(180deg, var(--blue) 0%, #1e57a3 100%);
+  background-image: linear-gradient(180deg, var(--blue) 0%, var(--dark) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;

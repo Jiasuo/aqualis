@@ -1,16 +1,16 @@
 <template>
   <div class="container">
       <ul class="nav left">
-          <li class="navItem"><router-link to="/">Accueil</router-link></li>
-          <li class="navItem"><router-link to="/">Attractions</router-link></li>
-          <li class="navItem"><router-link to="/">Téléchargements</router-link></li>
+          <li class="navItem"><router-link to="/" active-class="active">Accueil</router-link></li>
+          <li class="navItem"><router-link :to="{name: 'AttractionList'}"  active-class="active">Attractions</router-link></li>
+          <li class="navItem"><router-link to="/" active-class="active">Téléchargements</router-link></li>
       </ul>
       <div class="logoContainer">
           <img src="../assets/img/logo.svg" alt="Logo Aqualis">
       </div>
       <ul class="nav right">
-          <li class="navItem"><router-link to="/">Services</router-link></li>
-          <li class="navItem"><router-link to="/">Contact</router-link></li>
+          <li class="navItem"><router-link to="/" active-class="active">À propos</router-link></li>
+          <li class="navItem"><router-link to="/" active-class="active">Contact</router-link></li>
           <li class="navItem tickets"><router-link to="/" class="button tickets">Billetterie</router-link></li>
       </ul>
   </div>
@@ -26,11 +26,11 @@
   top: 0;
   width: 100%;
   max-width: 100%;
-  height: clamp(66.5px, 6.93vw, 133px);
+  height: clamp(45px, 4.69vw, 90px);
   padding: 0 7.81vw;
   display: grid;
-  grid-template-columns: 1fr clamp(45px, 4.69vw, 90px) 1fr;
-  gap: clamp(100px, 10.42vw, 200px);
+  grid-template-columns: 1fr 4.69vw 1fr;
+  gap: 5vw;
   /* background-image: linear-gradient(
     90.27deg,
     rgba(255, 255, 255, 0.49) 0%,
@@ -47,8 +47,8 @@
     justify-content: center;
 }
 .logoContainer img{
-    width: clamp(45px, 4.69vw, 90px);
-    height: clamp(43.86px, 4.57vw, 87.72px);
+    width: clamp(30px, 3.13vw, 60px);
+    height: clamp(30px, 3.13vw, 60px);
 }
 a{
     color: white;
@@ -72,5 +72,8 @@ a{
 }
 .navItem .tickets:hover {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+.active{
+    color: var(--orange);
 }
 </style>

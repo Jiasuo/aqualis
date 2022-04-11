@@ -22,7 +22,10 @@ export default {
 
 <style>
 .topBg{
-    height: clamp(66.5px, 6.93vw, 133px);
+    height: clamp(45px, 4.69vw, 90px);
     background: linear-gradient(180deg, #208CEB 0%, #014972 100%);
+}
+section{
+  padding: 7.81vw 15.63vw;
 }
 </style>
