@@ -3,13 +3,13 @@
       <ul class="nav left">
           <li class="navItem"><router-link to="/" active-class="active">Accueil</router-link></li>
           <li class="navItem"><router-link :to="{name: 'AttractionList'}"  active-class="active">Attractions</router-link></li>
-          <li class="navItem"><router-link to="/" active-class="active">Téléchargements</router-link></li>
+          <li class="navItem"><router-link :to="{name:'Plan'}" active-class="active">Plan d'Aqualis</router-link></li>
       </ul>
       <div class="logoContainer">
           <img src="../assets/img/logo.svg" alt="Logo Aqualis">
       </div>
       <ul class="nav right">
-          <li class="navItem"><router-link :to="{name: 'About'}" active-class="active">À propos</router-link></li>
+          <li class="navItem"><router-link :to="{name: 'Infos'}" active-class="active">Informations</router-link></li>
           <li class="navItem"><div  @click="showContact=true" class="contactButton">Contact</div></li>
           <li class="navItem tickets"><router-link to="/" class="button tickets">Billetterie</router-link></li>
       </ul>
