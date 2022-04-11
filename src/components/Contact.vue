@@ -18,7 +18,6 @@
 
 <script setup>
 const emit = defineEmits(['closeContact'])
-
 </script>
 
 <style scoped>
