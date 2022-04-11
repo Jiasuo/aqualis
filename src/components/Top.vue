@@ -9,7 +9,7 @@
           <img src="../assets/img/logo.svg" alt="Logo Aqualis">
       </div>
       <ul class="nav right">
-          <li class="navItem"><router-link to="/" active-class="active">À propos</router-link></li>
+          <li class="navItem"><router-link :to="{name: 'About'}" active-class="active">À propos</router-link></li>
           <li class="navItem"><router-link to="/" active-class="active">Contact</router-link></li>
           <li class="navItem tickets"><router-link to="/" class="button tickets">Billetterie</router-link></li>
       </ul>
@@ -56,7 +56,6 @@ a{
     font-size: 13px;
     letter-spacing: 0.05em;
 }
-
 .navItem:not([class*=tickets]) a:hover{
     color: var(--orange);
 }
@@ -73,7 +72,7 @@ a{
 .navItem .tickets:hover {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.1) 100%);
 }
-.active{
+.navItem a.active{
     color: var(--orange);
 }
 </style>
