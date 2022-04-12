@@ -41,45 +41,9 @@
   <section class="ticketsContainer">
     <h2>Billetterie</h2>
     <div class="tickets">
-      <div class="ticket">
-        <div class="top">
-          <h3>Pass Journée</h3>
-          <p>Billet 1 jours valable tous les jours d'ouverture d'Aqualis</p>
-        </div>
-        <div class="bot">
-          <div class="priceContainer">
-            <div class="selector">-<span class="quantity">1</span>+</div>
-            <div class="price">35 EUR</div>
-          </div>
-          <div class="button">Réserver</div>
-        </div>
-      </div>
-      <div class="ticket">
-        <div class="top">
-          <h3>Pass Journée</h3>
-          <p>Billet 1 jours valable tous les jours d'ouverture d'Aqualis</p>
-        </div>
-        <div class="bot">
-          <div class="priceContainer">
-            <div class="selector">-<span class="quantity">1</span>+</div>
-            <div class="price">35 EUR</div>
-          </div>
-            <div class="button">Réserver</div>
-        </div>
-      </div>
-      <div class="ticket">
-        <div class="top">
-          <h3>Pass Journée</h3>
-          <p>Billet 1 jours valable tous les jours d'ouverture d'Aqualis</p>
-        </div>
-        <div class="bot">
-          <div class="priceContainer">
-            <div class="selector">-<span class="quantity">1</span>+</div>
-            <div class="price">35 EUR</div>
-          </div>
-            <div class="button">Réserver</div>
-        </div>
-      </div>
+      <Ticket tag="1d" ticket="Pass Journée" :price="35" text="Billet 1 jours valable tous les jours d'ouverture d'Aqualis"/>
+      <Ticket tag="2d" ticket="Pass 2 jours" :price="55" text="Billet 2 jours valable tous les jours d’ouverture d’Aqualis"/>
+      <Ticket tag="1y" ticket="Pass 2022" :price="90" text="Billet nominatif valable tous les jours d’ouverture d’Aqualis"/>
     </div>
   </section>
   <!-- ACTIVITIES -->
@@ -128,6 +92,7 @@
 <script setup>
 // Components
 import Attraction from "../components/Attraction.vue"
+import Ticket from "../components/Ticket.vue"
 </script>
 
 <style scoped>
@@ -251,52 +216,6 @@ section.ticketsContainer {
   margin-top: 5.21vw;
   display: flex;
   justify-content: space-between;
-}
-.tickets .ticket {
-  width: clamp(194.5px, 20.26vw, 389px);
-  height: clamp(336.72px, 35.08vw, 673.44px);
-  padding: 4.79vw 2.6vw;
-  background-image: url("../assets/img/ticket_card.png");
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.ticket h3 {
-  font-size: clamp(14.18px, 1.48vw, 28.36px);
-  text-align: center;
-}
-.ticket p {
-  margin-top: 2.08vw;
-  text-align: center;
-  color: var(--white);
-}
-.ticket .bot {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.bot .priceContainer {
-  margin-bottom: clamp(11.5px, 1.2vw, 23px);
-  display: flex;
-  align-items: center;
-  color: white;
-}
-.priceContainer .quantity{
-  margin: 0 clamp(5px, 0.52vw, 10px);
-  display: inline-block;
-  padding:0.47vw 1.2vw;
-  background-image: linear-gradient(114.85deg, rgba(255, 255, 255, 0.49) -0.29%, rgba(255, 255, 255, 0.07) 100.51%);
-backdrop-filter: blur(26.5831px);
-border-radius: clamp(7.5px, 0.78vw, 15px);
-}
-.price{
-  margin-left: clamp(20px, 2.08vw, 40px);
-  font-family: var(--title);
-  font-size: clamp(16px, 1.67vw, 32px);
-  letter-spacing: 0.05em;
 }
 /* #endregion */
 
