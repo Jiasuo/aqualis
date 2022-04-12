@@ -206,7 +206,7 @@ section.servicesContainer {
   );
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
-  color: var(--black);
+  color: white;
   font-size: clamp(12px, 1.25vw, 24px);
   display: flex;
   flex-direction: column;
