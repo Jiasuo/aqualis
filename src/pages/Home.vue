@@ -322,6 +322,7 @@ section.activitiesContainer{
   border-radius: 1.15vw;
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
 }
 
 .attractionList .attraction:hover{
@@ -391,8 +392,7 @@ section.calendarContainer{
 }
 .calendarContainer .cta{
   margin-top: 5vw;
-  width: clamp(163px, 16.98vw, 326px);
-  background-image: linear-gradient(196.64deg, #EB6B20 11.5%, #AF5017 89.27%);
+  background-image: var(--gradO);
 }
 /* #endregion */
 </style>

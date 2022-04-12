@@ -68,6 +68,7 @@ h2{
   }
 
   .button{
+    width: fit-content;
     font-family: var(--title);
       padding: clamp(7.5px, 0.78vw, 15px) clamp(17.5px, 1.82vw, 35px);
      border-radius: clamp(17.5px, 1.82vw, 35px);
