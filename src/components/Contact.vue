@@ -17,10 +17,12 @@
 </template>
 
 <script setup>
+// #region IMPORTS
 import { reactive, ref } from "@vue/reactivity"
 import { onMounted } from "@vue/runtime-core"
+// #endregion
 
-// Values
+// #region VARIABLES
 const emit = defineEmits(['closeContact'])
 const entries = reactive({
     name: "",
@@ -28,10 +30,11 @@ const entries = reactive({
     subject: "",
     message: ""
 })
-
 const nameInput = ref()
+// #endregion
 
-// Methods
+
+// #region METHODS
 function closeModal(){
     // Clear entries
     entries.name=""
@@ -40,11 +43,13 @@ function closeModal(){
     entries.message = ""
     emit('closeContact');
 }
+// #endregion
 
-// Lifecycle
+// #region LIFECYCLE
 onMounted(()=>{
     nameInput.value.focus();
 })
+// #endregion
 </script>
 
 <style scoped>
