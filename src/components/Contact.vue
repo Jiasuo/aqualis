@@ -1,23 +1,50 @@
 <template>
-  <div class="contactContainer" @click.self="$emit('closeContact')">
+  <div class="contactContainer" @click.self="closeModal">
           <div class="contactCard">
               <h2>Contact</h2>
               <div class="topFields">
-                  <input type="text" placeholder="Nom" class="name">
-                  <input type="email" placeholder="Adresse Email" class="mail">
-                  <input type="text" placeholder="Sujet du message" class="subject">
+                  <input type="text" ref="nameInput" v-model="entries.name" placeholder="Nom" class="name">
+                  <input type="email" v-model="entries.email" placeholder="Adresse Email" class="mail">
+                  <input type="text" v-model="entries.subject" placeholder="Sujet du message" class="subject">
               </div>
               <div class="bottomField">
-                  <textarea cols="30" rows="10" placeholder="Ecrivez votre message ici ..."></textarea>
+                  <textarea v-model="entries.message" cols="30" rows="10" placeholder="Ecrivez votre message ici ..."></textarea>
               </div>
-                <div class="button" @click="$emit('closeContact')">Envoyer</div>
-                <div class="close" @click="$emit('closeContact')"></div>
+                <div class="button" @click="closeModal">Envoyer</div>
+                <div class="close" @click="closeModal"></div>
           </div>
       </div>
 </template>
 
 <script setup>
+import { reactive, ref } from "@vue/reactivity"
+import { onMounted } from "@vue/runtime-core"
+
+// Values
 const emit = defineEmits(['closeContact'])
+const entries = reactive({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+})
+
+const nameInput = ref()
+
+// Methods
+function closeModal(){
+    // Clear entries
+    entries.name=""
+    entries.email=""
+    entries.subject = ""
+    entries.message = ""
+    emit('closeContact');
+}
+
+// Lifecycle
+onMounted(()=>{
+    nameInput.value.focus();
+})
 </script>
 
 <style scoped>
