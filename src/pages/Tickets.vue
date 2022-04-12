@@ -49,6 +49,7 @@ header::before {
 }
 h1 {
   margin-top: -2.5vw;
+  font-size: clamp(36px, 3.75vw, 72px);
 }
 header .card {
   margin-top: 2.5vw;
