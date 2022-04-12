@@ -170,18 +170,6 @@ header .card {
   font-size: clamp(12px, 1.04vw, 20px);
   line-height: clamp(18px, 1.56vw, 30px);
 }
-header .card .cta {
-  margin-top: 1.5vw;
-  background-image: linear-gradient(196.64deg, #eb6b20 11.5%, #af5017 89.27%);
-  transition: 0.3s linear;
-}
-header .card .cta:hover {
-  background-image: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.7) 0%,
-    rgba(255, 255, 255, 0.1) 100%
-  );
-}
 /* #endregion */
 
 /* #region Services */

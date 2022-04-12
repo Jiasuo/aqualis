@@ -6,6 +6,7 @@ import AttractionList from "../pages/AttractionList"
 import AttractionDetail from "../pages/AttractionDetail"
 import Infos from "../pages/Infos"
 import Plan from "../pages/Plan"
+import Tickets from "../pages/Tickets"
 
 const routes = [
     {
@@ -32,6 +33,11 @@ const routes = [
         path: "/plan",
         name:"Plan",
         component: Plan
+    },
+    {
+        path: "/billetterie",
+        name: "Tickets",
+        component: Tickets
     }
 ]
 
