@@ -72,7 +72,7 @@ footer {
   height: clamp(205.84px, 21.44vw, 411.68px);
   padding: clamp(57.5px, 5.99vw, 115px) clamp(75px, 7.81vw, 150px)
     clamp(9.6px, 1vw, 19.2px) clamp(75px, 7.81vw, 150px);
-    background-color: #1e57a3;
+    background-color: var(--dark);
   background-image: url("../assets/img/footer_bg.svg");
   background-size: cover;
   background-position: center;
