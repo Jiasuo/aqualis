@@ -11,7 +11,7 @@
       <ul class="nav right">
           <li class="navItem"><router-link :to="{name: 'Infos'}" active-class="active">Informations</router-link></li>
           <li class="navItem"><div  @click="showContact=true" class="contactButton">Contact</div></li>
-          <li class="navItem tickets"><router-link to="/" class="button tickets">Billetterie</router-link></li>
+          <li class="navItem tickets"><router-link :to="{name: 'Tickets'}" class="button tickets">Billetterie</router-link></li>
       </ul>
   </div>
   <!-- Contact modal -->

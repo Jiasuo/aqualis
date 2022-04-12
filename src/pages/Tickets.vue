@@ -1,8 +1,8 @@
 <template>
   <header>
-    <h1>Informations</h1>
+    <h1>Billetterie</h1>
     <div class="card">
-      <h2>À propos d'Aqualis</h2>
+      <h2>Chacun son tour</h2>
       <p>
         Viens découvrir le meilleur parc aquatique de France. Un grand nombre
         d’attractions promet du fun aquatique pour toute la famille!
