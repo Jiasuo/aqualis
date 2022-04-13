@@ -8,7 +8,7 @@
         Viens découvrir le meilleur parc aquatique de France. Un grand nombre
         d’attractions promet du fun aquatique pour toute la famille!
       </p>
-      <div class="button cta">Réserver</div>
+      <router-link :to="{name:'Tickets'} " class="button cta">Réserver</router-link>
     </div>
     <div class="img_mask"></div>
   </header>
@@ -27,7 +27,7 @@
         </p>
       </div>
       <div class="right">
-        <div class="button">Toutes les attractions</div>
+        <router-link :to="{name: 'AttractionList'}" class="button">Toutes les attractions</router-link>
       </div>
     </div>
     <!-- Bot -->
@@ -51,13 +51,13 @@
     <h2>Attractions</h2>
     <div class="attractionList">
       <div class="attraction children">
-        <div class="button">Enfants</div>
+        <router-link :to="{name: 'AttractionList'}" class="button">Enfants</router-link>
       </div>
       <div class="attraction sensations">
-        <div class="button">Sensations</div>
+        <router-link :to="{name: 'AttractionList'}" class="button">Sensations</router-link>
       </div>
       <div class="attraction chill">
-        <div class="button">Détente</div>
+        <router-link :to="{name: 'AttractionList'}" class="button">Détente</router-link>
       </div>
     </div>
   </section>
@@ -85,7 +85,7 @@
           <div class="indicator closed"></div>Parc fermé</li>
       </ul>
     </div>
-    <div class="cta button">Billetterie</div>
+    <router-link :to="{name: 'Tickets'}" class="cta button">Billetterie</router-link>
   </section>
 </template>
 

@@ -18,7 +18,7 @@
   </div>
   <!-- Contact modal -->
   <teleport to="body">
-      <Contact v-if="showContact" @closeContact="showContact=false" />
+      <Contact v-if="showContact"/>
   </teleport>
 </template>
 
@@ -27,9 +27,8 @@
 import Contact from "./Contact.vue"
 // Dependencies
 import {ref} from "vue"
-// const showContact = ref(true); // Dev
-const showContact = ref(false); // prod
-
+// State
+import {showContact} from "../store"
 </script>
 
 <style scoped>

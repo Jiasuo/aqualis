@@ -20,10 +20,12 @@
 // #region IMPORTS
 import { reactive, ref } from "@vue/reactivity"
 import { onMounted } from "@vue/runtime-core"
+
+// Import state
+import {showContact} from "../store"
 // #endregion
 
 // #region VARIABLES
-const emit = defineEmits(['closeContact'])
 const entries = reactive({
     name: "",
     email: "",
@@ -41,7 +43,8 @@ function closeModal(){
     entries.email=""
     entries.subject = ""
     entries.message = ""
-    emit('closeContact');
+    // Close modal
+    showContact.value = false;
 }
 // #endregion
 
