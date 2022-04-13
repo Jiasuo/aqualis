@@ -171,6 +171,7 @@ p.copyright {
     grid-template-columns: repeat(2, 5vw);
     grid-template-rows: repeat(2, 5vw);
     gap: 0.63vw;
+    cursor: pointer;
 }
 .fb{
     background-image: url("../assets/img/fb.svg");
