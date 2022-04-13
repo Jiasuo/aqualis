@@ -180,7 +180,7 @@ section.detailsContainer {
   align-items: center;
 }
 .desc {
-  margin-top: 2.08vw;
+  margin-top: 5.21vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -197,6 +197,10 @@ section.detailsContainer {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.desc .right .button:hover{
+  background-image: var(--gradO);
 }
 
 /* #endregion */

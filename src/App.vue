@@ -85,9 +85,9 @@ h3 {
 }
 h4 {
   text-transform: uppercase;
-  font-size: clamp(18px, 1.88vw, 36px);
+  font-size: clamp(12px, 1.25vw, 24px);
   letter-spacing: 0.275em;
-  color: white;
+  color: var(--white);
 }
 h5 {
   text-align: center;
