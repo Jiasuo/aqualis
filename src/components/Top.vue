@@ -1,4 +1,6 @@
 <template>
+    <!-- Top bg -->
+    <div class="topBg"></div>
   <div class="container">
       <ul class="nav left">
           <li class="navItem"><router-link to="/" active-class="active">Accueil</router-link></li>
@@ -31,6 +33,10 @@ const showContact = ref(false); // prod
 </script>
 
 <style scoped>
+.topBg{
+    height: clamp(45px, 4.69vw, 90px);
+    background: linear-gradient(180deg, #208CEB 0%, #014972 100%);
+}
 .container {
   position: fixed;
   z-index: 999;
