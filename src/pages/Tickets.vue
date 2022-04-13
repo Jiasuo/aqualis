@@ -28,7 +28,7 @@
 Récupérez vos billets en caisse le jour de votre visite</p>
 <p>Contactez le 01 23 45 67 89<br/>ou commercial@aqualis.fr</p>
   <h5>à partir de 20 EUR /Jour</h5>
-  <div class="button">Devis</div>
+  <div class="button" @click="showContact=true">Devis</div>
       </div>
     </div>
   </section>
@@ -36,6 +36,7 @@ Récupérez vos billets en caisse le jour de votre visite</p>
 
 <script setup>
 import Ticket from "../components/Ticket.vue"
+import {showContact} from "../store"
 </script>
 
 <style scoped>

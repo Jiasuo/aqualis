@@ -47,16 +47,16 @@
         <h3>Site</h3>
         <ul class="nav">
           <li class="navItem">
-            <router-link :to="{ name: 'Home' }" class="navLink">Billetterie</router-link>
+            <router-link :to="{ name: 'Tickets' }" active-class="orange" class="navLink">Billetterie</router-link>
           </li>
           <li class="navItem">
-            <router-link :to="{ name: 'Home' }" class="navLink">Activités</router-link>
+            <router-link :to="{ name: 'AttractionList' }" active-class="orange" class="navLink">Attractions</router-link>
           </li>
           <li class="navItem">
-            <router-link :to="{ name: 'Home' }" class="navLink">A propos</router-link>
+            <router-link :to="{ name: 'Infos' }" active-class="orange" class="navLink">A propos</router-link>
           </li>
           <li class="navItem">
-            <router-link :to="{ name: 'Home' }" class="navLink">Contact</router-link>
+            <div @click="showContact=true" class="navLink">Contact</div>
           </li>
         </ul>
       </div>
@@ -65,6 +65,7 @@
 </template>
 
 <script setup>
+import {showContact} from "../store"
 </script>
 
 <style scoped>
@@ -210,6 +211,16 @@ p.copyright {
     text-decoration: none;
     color: white;
     font-size: clamp(12px, 1.25vw, 24px);
+    cursor: pointer;
+}
+.navLink:hover{
+  color: var(--orange);
+}
+.navLink.orange:hover{
+  color: white;
+}
+.orange{
+  color: var(--orange);
 }
 /* #endregion */
 </style>
